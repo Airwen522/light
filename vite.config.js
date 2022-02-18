@@ -18,7 +18,14 @@ export default ({ command, mode }) => {
     ],
     server: {
       port: envConfig.VITE_SERVER_PORT,
-      host: envConfig.VITE_SERVER_HOST
+      host: envConfig.VITE_SERVER_HOST,
+      proxy:{
+        '/api': {
+          target: `${envConfig.VITE_TARGET_HOST}:${envConfig.VITE_TARGET_PORT}`,
+          changeOrigin: true,
+          rewrite: path => path.replace(/^\/api/, '')
+        }
+      }
     },
     envDir: './env',
     resolve: {
