@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "axios": "^0.26.0",
+    "fast-glob": "^3.2.11",
     "sass": "^1.49.8",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vue": "^3.2.25",
     "vue-axios": "^3.4.1",
     "vue-router": "^4.0.12",
