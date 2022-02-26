@@ -2,7 +2,7 @@
     <svg 
         class="wi-icon" 
         aria-hidden="true"
-        :style="{fontSize:`${size}px`}">
+        :style="{fontSize: size}">
         <use :xlink:href="symbolId" :fill="color" />
     </svg>
 </template>
@@ -10,7 +10,7 @@
 /**
  * 配置说明
  * name  [String] [Require]            : svg图像的名称，对应svg文件的名称
- * size  [Number] [Default - 16]       : svg图像的大小
+ * size  [String] [Default - 16px]       : svg图像的大小
  * color [String] [Default - #000000]  : svg的颜色(预先就有颜色的svg无法在定义新的颜色)
  */
 import { computed } from 'vue';
@@ -20,7 +20,7 @@ const props = defineProps({
         default: 'wi',
     },
     size:{
-        type:Number,
+        type:String,
         default:16
     },
     name: {

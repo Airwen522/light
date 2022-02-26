@@ -36,7 +36,7 @@ export default ({ command, mode }) => {
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: `@import '_/assets/style/variable.sass'`
+          additionalData: `@import '_/assets/style/variable.sass'\n@import '_/assets/style/base.sass'`
         }
       }
     }
